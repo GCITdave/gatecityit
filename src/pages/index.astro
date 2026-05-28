@@ -209,7 +209,7 @@
   </nav>
 
   <section class="hero">
-    <h1>Reliable IT support for<br />Greensboro small businesses</h1>
+    <h1>Expert IT support for<br />Triad area SMBs</h1>
     <p>We keep your technology running so you can focus on what matters — running your business.</p>
     <div class="hero-btns">
       <a href="tel:3367431880" class="btn-primary">(336) 743-1880</a>
@@ -276,12 +276,10 @@
             </a>
           </div>
         </div>
-        <form class="contact-form" name="contact" method="POST" data-netlify="true">
-          <input type="text" name="name" placeholder="Your name" required />
-          <input type="email" name="email" placeholder="Email address" required />
-          <input type="tel" name="phone" placeholder="Phone number" />
-          <textarea name="message" placeholder="How can we help?"></textarea>
-          <button type="submit">Send message →</button>
+        <form class="contact-form" name="contact" method="POST" action="https://api.web3forms.com/submit">
+        <input type="hidden" name="access_key" value="48182325-7d17-4172-9472-4bb2f434c566" />
+        <input type="hidden" name="subject" value="New contact form submission - Gate City IT" />
+        <input type="checkbox" name="botcheck" style="display:none" />
         </form>
       </div>
     </div>
