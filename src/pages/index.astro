@@ -169,6 +169,16 @@
     .contact-form input:focus,
     .contact-form textarea:focus { outline: 2px solid var(--purple-accent); border-color: transparent; }
     .contact-form textarea { height: 100px; resize: vertical; }
+    .sms-consent {
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--gray-mid);
+      background: var(--purple-light);
+      border-left: 3px solid var(--purple-accent);
+      border-radius: 4px;
+      padding: 10px 12px;
+    }
+    .sms-consent a { color: var(--purple-mid); text-decoration: underline; }
     .contact-form button {
       background: var(--purple-mid);
       color: var(--white);
@@ -285,6 +295,14 @@
           <input type="email" name="email" placeholder="Email address" required />
           <input type="tel" name="phone" placeholder="Phone number" />
           <textarea name="message" placeholder="How can we help?"></textarea>
+          <input type="hidden" name="sms_consent" value="Accepted via form submission" />
+          <p class="sms-consent">
+            By submitting this form, you agree to receive text messages from Gate City IT
+            at the phone number provided. Messages relate to your support requests,
+            scheduling, and service updates. Message frequency varies. Message and data
+            rates may apply. Reply STOP to opt out or HELP for help. See our
+            <a href="/privacy-policy">Privacy policy</a>.
+          </p>
           <button type="submit">Send message →</button>
         </form>
       </div>
