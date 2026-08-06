@@ -1,6 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <!-- Purple background -->
-  <rect width="32" height="32" rx="6" fill="#3b1f6e"/>
-  <!-- GC letters in italic serif to echo logo script style -->
-  <text x="16" y="24" font-family="Palatino, Palatino Linotype, Book Antiqua, serif" font-size="20" font-weight="bold" font-style="italic" fill="#ffffff" text-anchor="middle">GC</text>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 33.866667 33.866666"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="icon2.png"
+   inkscape:export-xdpi="12"
+   inkscape:export-ydpi="12"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   sodipodi:docname="favicon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="4.6715474"
+     inkscape:cx="77.490384"
+     inkscape:cy="42.06315"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="940"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer3" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Layer 2">
+    <circle
+       style="fill:#512179;stroke:#000000;stroke-width:0.00600001"
+       id="path1"
+       cx="16.933332"
+       cy="16.933332"
+       r="16.821247" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.5222px;font-family:Impact;-inkscape-font-specification:Impact;writing-mode:lr-tb;direction:ltr;fill:#512179;stroke:#000000;stroke-width:0.00600001"
+       x="4.8958631"
+       y="20.712986"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.5222px;font-family:'Alameda Script PERSONAL USE';-inkscape-font-specification:'Alameda Script PERSONAL USE';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.006"
+         x="4.8958631"
+         y="20.712986">gcit</tspan></text>
+  </g>
 </svg>
