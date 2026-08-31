@@ -35,7 +35,6 @@ depends on Workers behaviour or bindings.
 ```
 src/pages/          one .astro file per route, each fully self-contained
 public/             static assets served as-is
-content/posts/      unused (see "Known cruft")
 wrangler.jsonc      Cloudflare Worker config
 ```
 
@@ -110,12 +109,3 @@ isn't in git. Worth committing first.
 `ProfessionalService` JSON-LD block listing the services, the towns served, and
 the LinkedIn profile. If you add or rename a service card, update the JSON-LD
 `hasOfferCatalog` to match.
-
-## Known cruft
-
-- **`content/posts/hello-world.md`** is placeholder lorem ipsum and is not
-  rendered by any route.
-- **`public/admin/`** contains an abandoned TinaCMS shell that points at a dev
-  server on `localhost:4001`. There is no Tina config or dependency in the
-  project, so it does nothing in production. Both it and `content/posts/` can be
-  deleted unless a CMS is planned.
