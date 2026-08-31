@@ -5,9 +5,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Gate City IT provides managed IT services for small businesses in Greensboro, NC. Cybersecurity, help desk, cloud services and more." />
+  <meta name="description" content="Managed IT support, cybersecurity, and help desk for small businesses in Greensboro and across the Triad. Microsoft 365, backup, networks, phone systems, and compliance. Call (336) 743-1880." />
+  <link rel="canonical" href="https://gatecityit.com/" />
   <title>Gate City IT | Managed IT Support in Greensboro, NC</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Gate City IT" />
+  <meta property="og:title" content="Gate City IT | Managed IT Support in Greensboro, NC" />
+  <meta property="og:description" content="Managed IT support, cybersecurity, and help desk for small businesses across the Triad." />
+  <meta property="og:url" content="https://gatecityit.com/" />
+  <meta property="og:image" content="https://gatecityit.com/GCIT-Skyline-Logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: system-ui, -apple-system, sans-serif; color: #1a1a1a; line-height: 1.6; }
@@ -126,7 +135,7 @@
 
     /* Services */
     .services { background: var(--white); }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); gap: 20px; }
     .service-card {
       background: var(--gray-light);
       border: 1px solid #e2d9f3;
@@ -134,14 +143,45 @@
       padding: 24px 20px;
       border-top: 3px solid var(--purple-accent);
     }
-    .service-icon { font-size: 28px; margin-bottom: 12px; }
+    /* Icons: Lucide (lucide.dev) - ISC license - inlined, no runtime dependency */
+    .service-icon { margin-bottom: 14px; line-height: 0; color: var(--purple-mid); }
+    .service-icon svg { width: 34px; height: 34px; display: block; }
     .service-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; color: var(--purple-dark); }
     .service-card p { font-size: 14px; color: var(--gray-mid); line-height: 1.6; }
+
+    /* Why us */
+    .why { background: var(--purple-dark); padding: 48px 32px; }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 32px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .why-item h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .why-item p { font-size: 14.5px; color: #c4a8f0; line-height: 1.7; }
 
     /* About */
     .about { background: var(--purple-light); }
     .about-inner { max-width: 640px; margin: 0 auto; text-align: center; }
     .about-inner p { font-size: 16px; color: var(--gray-dark); line-height: 1.8; }
+    .about-inner p + p { margin-top: 18px; }
+    .service-area {
+      max-width: 640px;
+      margin: 32px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid #ddd0f5;
+      font-size: 14px;
+      color: var(--gray-mid);
+      text-align: center;
+      line-height: 1.7;
+    }
+    .service-area strong { color: var(--purple-dark); font-weight: 600; }
 
     /* Contact */
     .contact { background: var(--white); }
@@ -154,7 +194,10 @@
     }
     .contact-info h3 { font-size: 18px; font-weight: 600; margin-bottom: 20px; color: var(--purple-dark); }
     .contact-item { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 15px; color: var(--gray-dark); }
-    .contact-item .icon { font-size: 18px; color: var(--purple-accent); min-width: 20px; text-align: center; font-style: normal; }
+    .contact-item .icon { color: var(--purple-accent); display: flex; align-items: center; justify-content: center; min-width: 20px; }
+    .contact-item .icon svg { width: 20px; height: 20px; display: block; }
+    /* solid brand mark reads heavier than a 2px stroke, so size it down optically */
+    .contact-item .icon svg.brand { width: 18px; height: 18px; fill: currentColor; }
     .contact-form { display: flex; flex-direction: column; gap: 12px; }
     .contact-form input,
     .contact-form textarea {
@@ -203,6 +246,8 @@
       nav { padding: 12px 16px; }
       .hero { padding: 56px 20px; }
       section { padding: 48px 20px; }
+      .why { padding: 40px 20px; }
+      .why-grid { gap: 24px; }
       .contact-grid { grid-template-columns: 1fr; gap: 32px; }
     }
   </style>
@@ -218,7 +263,7 @@
 
   <section class="hero">
     <h1>Expert IT support for<br />Triad area small businesses</h1>
-    <p>We keep your technology running so you can focus on running your business.</p>
+    <p>Managed IT, cybersecurity, and help desk support for Greensboro-area businesses. We keep your technology running so you can get on with your work.</p>
     <div class="hero-btns">
       <a href="tel:3367431880" class="btn-primary">(336) 743-1880</a>
       <a href="#contact" class="btn-secondary">Book a Free Consultation</a>
@@ -228,28 +273,65 @@
   <section class="services">
     <div class="section-inner">
       <h2 class="section-title">What We Do</h2>
-      <p class="section-sub">Comprehensive managed IT services for small businesses in the Triad</p>
+      <p class="section-sub">Everything a small business needs from an IT department, without hiring one</p>
       <div class="services-grid">
         <div class="service-card">
-          <div class="service-icon">🛡️</div>
+          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /> </svg></div>
           <h3>Cybersecurity</h3>
-          <p>Protect your business from threats with proactive monitoring and rapid response.</p>
+          <p>Endpoint protection, email filtering, and monitoring that catches problems before they reach your team.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">🎧</div>
+          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z" /> <path d="M21 16v2a4 4 0 0 1-4 4h-5" /> </svg></div>
           <h3>Help desk support</h3>
-          <p>Fast, friendly support when your team needs it most — by phone, email, or helpdesk app.</p>
+          <p>Fast, friendly help by phone, email, or the helpdesk app, from people who already know your setup.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">☁️</div>
+          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" /> </svg></div>
           <h3>Cloud services</h3>
-          <p>Microsoft 365, cloud backup, and infrastructure management done right.</p>
+          <p>Microsoft 365, SharePoint, and cloud infrastructure set up properly and managed day to day.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">🖥️</div>
+          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2" /> <line x1="8" x2="16" y1="21" y2="21" /> <line x1="12" x2="12" y1="17" y2="21" /> </svg></div>
           <h3>Managed devices</h3>
-          <p>Every workstation kept updated, patched, and running at peak performance.</p>
+          <p>Every workstation and server kept patched, updated, and running the way it should.</p>
         </div>
+        <div class="service-card">
+          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><ellipse cx="12" cy="5" rx="9" ry="3" /> <path d="M3 12a9 3 0 0 0 5 2.69" /> <path d="M21 9.3V5" /> <path d="M3 5v14a9 3 0 0 0 6.47 2.88" /> <path d="M12 12v4h4" /> <path d="M13 20a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5c-1.33 0-2.54.54-3.41 1.41L12 16" /> </svg></div>
+          <h3>Backup &amp; disaster recovery</h3>
+          <p>Automated backups, tested restores, and a documented recovery plan, so a failed drive or a ransomware hit doesn&rsquo;t close you for the week.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20h.01" /> <path d="M2 8.82a15 15 0 0 1 20 0" /> <path d="M5 12.859a10 10 0 0 1 14 0" /> <path d="M8.5 16.429a5 5 0 0 1 7 0" /> </svg></div>
+          <h3>Networks &amp; Wi-Fi</h3>
+          <p>Firewalls, switching, business Wi-Fi, and secure remote access. Designed, installed, and maintained.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" /> </svg></div>
+          <h3>Business phone systems</h3>
+          <p>Hosted VoIP with number porting, call routing, voicemail to email, and mobile apps for the road.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="8" height="4" x="8" y="2" rx="1" ry="1" /> <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /> <path d="m9 14 2 2 4-4" /> </svg></div>
+          <h3>IT consulting &amp; compliance</h3>
+          <p>Budget planning, hardware roadmaps, and help meeting HIPAA, PCI, and cyber insurance requirements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="why-grid">
+      <div class="why-item">
+        <h3>20+ years in IT</h3>
+        <p>Two decades of hands-on work with the networks, servers, and software that small businesses run on.</p>
+      </div>
+      <div class="why-item">
+        <h3>On-site and remote</h3>
+        <p>Most issues get fixed remotely in minutes. When a job needs hands on the hardware, we come to you.</p>
+      </div>
+      <div class="why-item">
+        <h3>Built for SMBs</h3>
+        <p>Big enough that downtime costs you real money, small enough that a full-time IT hire makes no sense.</p>
       </div>
     </div>
   </section>
@@ -258,30 +340,34 @@
     <div class="about-inner">
       <h2 class="section-title">About Gate City IT</h2>
       <p class="section-sub">Local experts, personal service</p>
-      <p>We're a Greensboro-based IT company dedicated to helping small and medium businesses get enterprise-level technology support without the enterprise price tag. When you call us, you talk to someone who knows your business — not a distant call center.</p>
+      <p>Gate City IT is a Greensboro-based IT company bringing enterprise-grade technology support to small and medium businesses at a price that fits a small business budget. When you call, you talk to someone who already knows your network, your software, and how your business runs.</p>
+      <p>We handle most work remotely, so problems get solved the same day. When a job needs someone on site, whether that&rsquo;s a dead switch, a new office build-out, or a server that won&rsquo;t come back up, we&rsquo;re close by.</p>
+      <p class="service-area">
+        <strong>Where we work:</strong> Greensboro, High Point, Winston-Salem, Burlington,
+        Kernersville, Jamestown, Oak Ridge, and Summerfield, with remote support available
+        anywhere in North Carolina.
+      </p>
     </div>
   </section>
 
   <section class="contact" id="contact">
     <div class="section-inner">
       <h2 class="section-title">Get In Touch</h2>
-      <p class="section-sub">We'd love to hear from you!</p>
+      <p class="section-sub">Tell us what&rsquo;s giving you trouble and we&rsquo;ll tell you how we&rsquo;d fix it</p>
       <div class="contact-grid">
         <div class="contact-info">
           <h3>Contact us directly</h3>
           <div class="contact-item">
-            <span class="icon">&#9742;&#xFE0E;</span>
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" /> </svg></span>
             <a href="tel:3367431880">(336) 743-1880</a>
           </div>
           <div class="contact-item">
-            <span class="icon">&#9993;&#xFE0E;</span>
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /> <rect x="2" y="4" width="20" height="16" rx="2" /> </svg></span>
             <a href="mailto:info@gatecityit.com">info@gatecityit.com</a>
           </div>
           <div class="contact-item">
-            <a href="https://linkedin.com" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:10px; color: var(--gray-dark); text-decoration:none;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="var(--purple-accent)"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.027-3.061-1.865-3.061-1.865 0-2.151 1.457-2.151 2.963v5.702h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.844-1.563 3.042 0 3.604 2.002 3.604 4.604v5.592z"/></svg>
-              Find us on LinkedIn
-            </a>
+            <span class="icon"><svg class="brand" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.027-3.061-1.865-3.061-1.865 0-2.151 1.457-2.151 2.963v5.702h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.844-1.563 3.042 0 3.604 2.002 3.604 4.604v5.592z"/></svg></span>
+            <a href="https://www.linkedin.com/company/gatecityit" target="_blank" rel="noopener">Find us on LinkedIn</a>
           </div>
         </div>
         <form class="contact-form" name="contact" method="POST" action="https://api.web3forms.com/submit">
@@ -313,6 +399,51 @@
     &nbsp;·&nbsp;
     <a href="/terms-of-service">Terms of service</a>
   </footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Gate City IT",
+  "description": "Managed IT support, cybersecurity, and help desk services for small businesses in Greensboro and the Triad region of North Carolina.",
+  "url": "https://gatecityit.com/",
+  "telephone": "+1-336-743-1880",
+  "email": "info@gatecityit.com",
+  "image": "https://gatecityit.com/GCIT-Skyline-Logo.png",
+  "sameAs": ["https://www.linkedin.com/company/gatecityit"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Greensboro",
+    "addressRegion": "NC",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Greensboro" },
+    { "@type": "City", "name": "High Point" },
+    { "@type": "City", "name": "Winston-Salem" },
+    { "@type": "City", "name": "Burlington" },
+    { "@type": "City", "name": "Kernersville" },
+    { "@type": "City", "name": "Jamestown" },
+    { "@type": "City", "name": "Oak Ridge" },
+    { "@type": "City", "name": "Summerfield" },
+    { "@type": "State", "name": "North Carolina" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Managed IT Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cybersecurity" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Help desk support" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cloud services" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Managed devices" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Backup and disaster recovery" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Networks and Wi-Fi" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business phone systems" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "IT consulting and compliance" } }
+    ]
+  }
+}
+</script>
 
 </body>
 </html>
